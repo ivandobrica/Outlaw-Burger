@@ -1,0 +1,49 @@
+.banner {
+    max-width: 1440px;
+    margin: auto;
+    @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+    padding: 1rem 1rem 5rem;
+    &__container {
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+    }
+    &__title {
+        font-size: 3rem;
+        text-align: center;
+        margin: 2rem 0 1rem;
+    }
+    &__subtitle {
+        font-size: 1.5rem;
+    }
+    &__arrow--red {
+        display: none;
+    }
+}
+
+@include lg {
+    .banner {
+        flex-direction: row-reverse;
+        position: relative;
+        padding: 1rem 3rem 5rem;
+        &__container {
+            width: 50%;
+            &:last-of-type {
+                padding-right: 5rem;
+                align-items: flex-start;
+            }
+        }
+        &__heading {
+            position: relative;
+        }
+        &__title {
+            font-size: 6.25rem;
+            text-align: left;
+        }
+        &__arrow--red {
+            display: block;
+            position: absolute;
+            bottom: 10%;
+            right: -15%;
+            width: 40%;
+        }
+    }
+}

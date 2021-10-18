@@ -33,10 +33,7 @@
 }
 
 .overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     width: 100%;
     background-color: $light-black;
     visibility: hidden;
@@ -45,11 +42,8 @@
     z-index: 4;
     top: -200%;
     transition: all 1s;
-    &__bla {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    &__wrapper {
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     }
     &__item {
         font-family: "Banaue", sans-serif;
@@ -59,10 +53,8 @@
         font-size: 2rem;
         line-height: 1;
     }
-    .order-now {
-        width: 13rem;
-    }
 }
+
 
 @include md {
     .navigation {
@@ -84,9 +76,7 @@
             padding: 1rem 3rem;
         }
         &__list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        @include flex($justify-content: center, $align-items: center);
         }
         &__item {
             font-family: "Banaue", sans-serif;
@@ -97,7 +87,7 @@
             position: relative;
             &:not(:last-of-type):hover::after {
                 content: "";
-                background-image: url("../../assets/60c9f45c9ba8c85d6f31a022_line\ black.png");
+                background-image: url("../../assets/60c9f45c9ba8c85d6f31a022_lineblack.png");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
@@ -108,10 +98,6 @@
                 height: 30px; 
             
             }
-        }
-
-        .order-now {
-            width: 13rem;
         }
 
         .hamburger {

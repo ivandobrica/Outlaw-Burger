@@ -22,3 +22,14 @@
 .new-line {
     display: block;
 }
+
+.order-now {
+    width: 13rem;
+}
+
+.content {
+    .order-now {
+        margin-top: 2rem;
+        filter: drop-shadow(0px 40px 12px rgba(0,0,0,.3));
+    }
+}

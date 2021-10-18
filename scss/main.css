@@ -23,6 +23,8 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Banaue", sans-serif;
+  font-weight: bold;
+  line-height: 1;
 }
 
 img, a {
@@ -43,6 +45,89 @@ nav a {
 
 ul {
   list-style-type: none;
+}
+
+.banner {
+  max-width: 1440px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 1rem 5rem;
+}
+
+.banner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner__title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.banner__subtitle {
+  font-size: 1.5rem;
+}
+
+.banner__arrow--red {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .banner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    position: relative;
+    padding: 1rem 3rem 5rem;
+  }
+  .banner__container {
+    width: 50%;
+  }
+  .banner__container:last-of-type {
+    padding-right: 5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .banner__heading {
+    position: relative;
+  }
+  .banner__title {
+    font-size: 6.25rem;
+    text-align: left;
+  }
+  .banner__arrow--red {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: -15%;
+    width: 40%;
+  }
 }
 
 .navigation {
@@ -135,20 +220,20 @@ ul {
   transition: all 1s;
 }
 
-.overlay__bla {
+.overlay__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .overlay__item {
@@ -158,10 +243,6 @@ ul {
   text-transform: uppercase;
   font-size: 2rem;
   line-height: 1;
-}
-
-.overlay .order-now {
-  width: 13rem;
 }
 
 @media (min-width: 768px) {
@@ -198,7 +279,7 @@ ul {
   }
   .navigation__item:not(:last-of-type):hover::after {
     content: "";
-    background-image: url("../../assets/60c9f45c9ba8c85d6f31a022_line black.png");
+    background-image: url("../../assets/60c9f45c9ba8c85d6f31a022_lineblack.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -207,9 +288,6 @@ ul {
     left: 0;
     width: 100px;
     height: 30px;
-  }
-  .navigation .order-now {
-    width: 13rem;
   }
   .navigation .hamburger {
     display: none;
@@ -326,6 +404,9 @@ ul {
 
 @media (min-width: 768px) {
   .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -336,6 +417,9 @@ ul {
   .footer__container {
     width: 30%;
     margin: 1.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -372,5 +456,15 @@ ul {
 
 .new-line {
   display: block;
+}
+
+.order-now {
+  width: 13rem;
+}
+
+.content .order-now {
+  margin-top: 2rem;
+  -webkit-filter: drop-shadow(0px 40px 12px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 40px 12px rgba(0, 0, 0, 0.3));
 }
 /*# sourceMappingURL=main.css.map */

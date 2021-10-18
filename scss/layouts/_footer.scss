@@ -1,25 +1,16 @@
 .footer {
     background-color: $light-black;
     padding-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex($justify-content: center, $align-items: center);
     position: relative;
     padding-bottom: 5rem;
     &__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
         max-width: 1440px;
     }
     &__container {
         margin: 1rem;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     }
     &__image {
         width: 40%;
@@ -34,9 +25,7 @@
         color: $white;
     }
     &__social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex($justify-content: center, $align-items: center);
         &-item {
             padding: 0.5rem;
         }
@@ -67,14 +56,12 @@
 @include md {
     .footer {
         &__wrapper {
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include flex($flex-direction: row, $flex-wrap: wrap);
         }
         &__container {
             width: 30%;
             margin: 1.5%;
-            justify-content: flex-start;
-            align-items: center;
+            @include flex($justify-content: flex-start, $align-items: center);
         }
         &__image {
             width: 50%;
