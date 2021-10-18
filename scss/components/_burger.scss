@@ -1,0 +1,97 @@
+.burger {
+    max-width: 1440px;
+    margin: auto;
+    @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+    padding: 1rem 1rem 5rem;
+    &__container {
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+    }
+    &__arrow--red,
+    &__cross {
+        display: none;
+    }
+    &__title {
+        font-size: 3rem;
+        text-align: center;
+        margin: 2rem 0 1rem;
+    }
+    &__subtitle {
+        line-height: 1;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    &--left {
+        .burger__container {
+            &--background {
+                background-image: url("../../assets/60aff6744e1f540ea20b9243_brick-cutout.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
+
+@include md {
+    .burger {
+        &__title {
+            font-size: 4.438rem;
+        }
+        &__subtitle {
+            font-size: 2rem;
+        }
+    }
+}
+
+@include lg {
+    .burger {
+        position: relative;
+        padding: 1rem 3rem 5rem;
+        &__container {
+            width: 50%;
+            
+        }
+        &__heading {
+            position: relative;
+        }
+        &__arrow--red {
+            display: block;
+            position: absolute;
+            bottom: 10%;
+            right: -15%;
+            width: 40%;
+        }
+        &__cross {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 35%;
+            width: 40%;
+        }
+        &__title {
+            font-size: 6.25rem;
+            text-align: left;
+        }
+        &__subtitle {
+            text-align: left;
+        }
+        &--right {
+            flex-direction: row-reverse;
+            .burger__container {
+                &:last-of-type {
+                    padding-right: 5rem;
+                    align-items: flex-start;
+                }
+            }
+        }
+        &--left {
+            flex-direction: row;
+            .burger__container {
+                &:last-of-type {
+                    padding-left: 5rem;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

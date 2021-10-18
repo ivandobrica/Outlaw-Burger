@@ -1,0 +1,96 @@
+.invite {
+    position: relative;
+    background-color: $dark-orange;
+    &__wrapper {
+        max-width: 1440px;
+        margin: auto;
+    }
+    &__line--orange {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        pointer-events: none;
+        z-index: -1;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        width: 70%;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
+    &__heading {
+        background-color: $light-grey;
+        border-radius: 15px;
+        padding: 2rem 1rem;
+    }
+    &__title {
+        font-size: 2.125rem;
+        text-align: center;
+    }
+    &__image {
+        display: none;
+    }
+}
+
+@include md {
+    .invite {
+        overflow: hidden;
+        &__container {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        &__title {
+            font-size: 4.375rem;
+        }
+        &__image {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: drop 1s linear;
+            &--wild {
+                left: -20%;
+                width: 60%;
+            }
+            &--outlaw {
+                right: -20%;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@include lg {
+    .invite {
+        &__container {
+            width: 60%;
+        }
+        &__title {
+            font-size: 5rem;
+        }
+        &__image {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &--wild {
+                left: 0;
+                width: 40%;
+                max-width: 500px;
+            }
+            &--outlaw {
+                right: 0;
+                width: 30%;
+                max-width: 400px;
+            }
+        }
+    }
+}
