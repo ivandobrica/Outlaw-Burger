@@ -1,6 +1,4 @@
 .burger {
-    max-width: 1440px;
-    margin: auto;
     @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     padding: 1rem 1rem 5rem;
     &__container {
@@ -34,6 +32,7 @@
 
 @include md {
     .burger {
+        padding: 1rem 3rem 5rem;
         &__title {
             font-size: 4.438rem;
         }
@@ -45,11 +44,11 @@
 
 @include lg {
     .burger {
+        max-width: 1440px;
+        margin: auto;
         position: relative;
-        padding: 1rem 3rem 5rem;
         &__container {
             width: 50%;
-            
         }
         &__heading {
             position: relative;

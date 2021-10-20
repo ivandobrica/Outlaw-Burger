@@ -8,7 +8,7 @@ $screen-md-min: 768px;
 $screen-lg-min: 1025px;
 
 // Large tablets and desktops
-$screen-xl-min: 1201px;
+$screen-xl-min: 1440px;
 
 // Small devices
 @mixin sm {
@@ -45,4 +45,13 @@ $screen-xl-min: 1201px;
     align-items: $align-items;
     flex-direction: $flex-direction;
     flex-wrap: $flex-wrap;
+}
+
+@mixin heading {
+    display: inline-block;
+    margin: 1rem 0;
+    background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
 }

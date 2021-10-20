@@ -1,7 +1,6 @@
 .accordion {
     @include flex($justify-content: center, $align-items: center, $flex-direction: column);
-    margin: 1rem;
-    max-width: 1000px;
+    padding: 1rem;
     &__wrapper {
         @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     }
@@ -19,14 +18,8 @@
         margin: 1rem 0 2rem;
     }
     &__title {
-        display: inline-block;
         font-size: 3rem;
-        margin: 1rem 0;
-        position: relative;
-        background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 100% 100%; 
+        @include heading;
     }
     &__tabs {
         @include flex($justify-content: center, $align-items: center, $flex-direction: column);
@@ -101,7 +94,7 @@
 
 @include md {
     .accordion {
-        margin: 1rem 3rem;
+        padding: 1rem 3rem;
         &__tabs {
             flex-direction: row;
         }
@@ -110,6 +103,7 @@
 
 @include lg {
     .accordion {
+        max-width: 1000px;
         margin: auto;
         &__question {
             font-size: 1.125rem;

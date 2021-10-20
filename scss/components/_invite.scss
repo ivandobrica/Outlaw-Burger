@@ -1,10 +1,6 @@
 .invite {
     position: relative;
     background-color: $dark-orange;
-    &__wrapper {
-        max-width: 1440px;
-        margin: auto;
-    }
     &__line--orange {
         position: absolute;
         top: -15px;
@@ -16,8 +12,7 @@
     }
     &__container {
         @include flex($justify-content: center, $align-items: center, $flex-direction: column);
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding: 3rem 0;
         width: 70%;
         margin: auto;
         position: relative;
@@ -41,8 +36,7 @@
     .invite {
         overflow: hidden;
         &__container {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
+            padding: 6rem 0;
         }
         &__title {
             font-size: 4.375rem;
@@ -67,6 +61,10 @@
 
 @include lg {
     .invite {
+        &__wrapper {
+            max-width: 1440px;
+            margin: auto;
+        }
         &__container {
             width: 60%;
         }

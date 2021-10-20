@@ -1,15 +1,8 @@
 .about {
     padding: 1rem;
-    max-width: 1000px;
     &__title {
-        display: inline-block;
         font-size: 3rem;
-        margin: 1rem 0;
-        position: relative;
-        background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;   
+        @include heading;
     }
     &__subtitle {
         font-size: 2.75rem;
@@ -25,7 +18,7 @@
 
 @include md {
     .about {
-        margin: 1rem 3rem;
+        padding: 1rem 3rem;
         &__title {
             font-size: 4rem;
         }
@@ -40,6 +33,7 @@
 
 @include lg {
     .about {
+        max-width: 1000px;
         margin: auto;
     }
 }
