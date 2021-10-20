@@ -1,22 +1,14 @@
 .accordion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     margin: 1rem;
     max-width: 1000px;
     &__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     }
     &__table {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
         display: none;
-        // animation: fadeEffect 1s;
+        animation: fadeEffect 1.5s;
         &--active {
             display: flex;
         }
@@ -37,10 +29,7 @@
         background-size: 100% 100%; 
     }
     &__tabs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
         margin: 0 0 2rem;
         &-item {
             width: 100%;
@@ -64,9 +53,7 @@
         margin-bottom: 1rem;
     }
     &__question-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        @include flex($justify-content: space-between, $align-items: flex-start);
     }
     .fa-plus {
         color: $dark-orange;
