@@ -1,0 +1,21 @@
+.legal {
+    padding: 3rem 1rem;
+    &__text {
+        margin: 1rem 0;
+        line-height: 1.4;
+        color: $silver-text;
+    }
+}
+
+@include md {
+    .legal {
+        padding: 3rem;
+    }
+}
+
+@include lg {
+    .legal {
+        max-width: 1440px;
+        margin: auto;
+    }
+}

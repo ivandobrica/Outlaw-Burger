@@ -29,6 +29,8 @@
         width: 5rem;
         margin: auto;
         margin-top: -8%;
+        position: relative;
+        cursor: pointer;
     }
     &__subtitle {
         font-size: 1.75rem;
@@ -78,4 +80,8 @@
             width: 90%;
         }
     }
+}
+
+.on {
+    animation: scale 1s;
 }

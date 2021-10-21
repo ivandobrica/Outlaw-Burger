@@ -30,10 +30,19 @@
 .content {
     .order-now {
         margin-top: 2rem;
-        filter: drop-shadow(0px 40px 12px rgba(0,0,0,.3));
+        filter: drop-shadow(0px 40px 12px rgba($black, 0.3));
+        transition: 1s;
+        &:hover {
+            filter: drop-shadow(0px 10px 12px rgba($black, 0.3));
+            transform: scale3d(0.95, 0.95, 1);
+        }
     }
 }
 
 .italic {
     font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
 }

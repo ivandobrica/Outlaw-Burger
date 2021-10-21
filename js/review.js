@@ -25,6 +25,7 @@ const reviews = [
 const author = document.querySelector(".review__person");
 const info = document.querySelector(".review__text");
 const nextBtn = document.querySelector(".review__next-btn");
+const container = document.querySelector(".review__container");
 
 let currentItem = 0;
 
@@ -42,10 +43,16 @@ function showPerson(person) {
 
 if(nextBtn) {
     nextBtn.addEventListener("click", () => {
+        container.classList.add("on");
         currentItem++;
         if (currentItem > reviews.length - 1) {
             currentItem = 0;
         }
-        showPerson(currentItem);
+        setTimeout(function () {
+            showPerson(currentItem);
+        }, 500);
+        setTimeout(function () {
+            container.classList.remove("on");
+        }, 1000);
     });
 }
