@@ -15,6 +15,92 @@ for (let i = 0; i < offertabs.length; i++) {
 }
 
 
+window.onload = function () {
+    slideBurgers[0].style.opacity = "1";
+    slideSides[0].style.opacity = "1";
+    slideDrinks[0].style.opacity = "1";
+}
+//carousel for burgers
+var slideBurgers = document.querySelectorAll(".offer__burgers .offer__slide");
+
+function changeBurger(index) {
+    countB = index;
+    for (var j = 0; j < slideBurgers.length; j++) {
+        slideBurgers[j].style.opacity = "0";
+    }
+    slideBurgers[countB].style.opacity = "1";
+}
+
+var countB = 0;
+var nextButton = document.querySelectorAll(".offer__next");
+for (let i = 0; i < nextButton.length; i++) {
+    nextButton[i].addEventListener("click", function() {
+        slideBurgers[countB].style.opacity = "0";
+        countB++;
+        if (countB == slideBurgers.length) {
+            countB = 0;
+            slideBurgers[countB].style.opacity = "1";
+        } 
+        else {
+            slideBurgers[countB].style.opacity = "1";
+        }
+    })
+}
+
+//carousel for sides
+var slideSides = document.querySelectorAll(".offer__sides .offer__slide");
+
+function changeSides(index) {
+    countS = index;
+    for (var j = 0; j < slideSides.length; j++) {
+        slideSides[j].style.opacity = "0";
+    }
+    slideSides[countS].style.opacity = "1";
+}
+
+var countS = 0;
+for (let i = 0; i < nextButton.length; i++) {
+    nextButton[i].addEventListener("click", function() {
+        slideSides[countS].style.opacity = "0";
+        countS++;
+        if (countS == slideSides.length) {
+            countS = 0;
+            slideSides[countS].style.opacity = "1";
+        } 
+        else {
+            slideSides[countS].style.opacity = "1";
+        }
+    })
+}
+
+//carousel for drinks
+var slideDrinks = document.querySelectorAll(".offer__drinks .offer__slide");
+
+function changeDrinks(index) {
+    countD = index;
+    for (var j = 0; j < slideDrinks.length; j++) {
+        slideDrinks[j].style.opacity = "0";
+    }
+    slideDrinks[countD].style.opacity = "1";
+}
+
+var countD = 0;
+for (let i = 0; i < nextButton.length; i++) {
+    nextButton[i].addEventListener("click", function() {
+        slideDrinks[countD].style.opacity = "0";
+        countD++;
+        if (countD == slideDrinks.length) {
+            countD = 0;
+            slideDrinks[countD].style.opacity = "1";
+        } 
+        else {
+            slideDrinks[countD].style.opacity = "1";
+        }
+    })
+}
+
+
+
 // let div = document.getElementsByClassName('menu__wrapper')[0],
 //     data = {
 //         "items": [

@@ -22,10 +22,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        justify-content: center;
-        align-items: center;
+        @include flex($justify-content: center, $align-items: center);
         background-color: rgba($black, 0.5);
-        display: flex;
         visibility: hidden;
         opacity: 0;
         transition: 0.5s;
@@ -56,9 +54,7 @@
     .menu {
         padding: 3rem;
         &__wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            @include flex($justify-content: space-between, $flex-wrap: wrap);
         }
         &__card {
             width: 48%;

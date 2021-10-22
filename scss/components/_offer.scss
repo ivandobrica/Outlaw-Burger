@@ -13,7 +13,7 @@
     }
     &__doodles {
         position: absolute;
-        top: -5%;
+        top: 0%;
         width: 70px;
         overflow: hidden;
         &--right {
@@ -35,10 +35,7 @@
         margin: 0 0 2rem;
         width: 100%;
         &-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flex($justify-content: center, $align-items: center, $flex-direction: column);
             width: 30%;
             text-align: center;
             cursor: pointer;
@@ -58,14 +55,34 @@
             width: 50px;
         }
     }
+    &__container {
+        width: 100%;
+        min-height: 800px;
+    }
     &__table {
-        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
         display: none;
         animation: fadeEffect 1.5s;
+        position: relative;
         &--active {
-            display: flex;
+            display: block;
         }
     }
+    &__next {
+        width: 85px;
+        margin-left: auto;
+    }
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        margin-top: 2rem;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        overflow: hidden;
+    }
+    
 }
 
 
@@ -73,7 +90,7 @@
     .offer {
         padding: 1rem 3rem;
         padding-top: 5rem;
-
+        
         &__doodles {
             width: 100px;
         }
@@ -84,10 +101,11 @@
             font-size: 2rem;
             margin: 1rem 0 2rem;
         }
-        &__table {
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-direction: row;
+        &__slide {
+            @include flex($justify-content: space-between, $align-items: flex-start);
+        }
+        &__container {
+            min-height: 500px;
         }
     }
 }
@@ -97,7 +115,9 @@
     .offer {
         padding: 1rem 3rem;
         padding-top: 5rem;
-
+        &__container {
+            min-height: 600px;
+        }
         &__doodles {
             width: 200px;
         }
@@ -107,16 +127,3 @@
         }
     }
 }
-
-// @include lg {
-//     .offer {
-//         max-width: 1000px;
-//         margin: auto;
-//         &__question {
-//             font-size: 1.125rem;
-//         }
-//         &__answer {
-//             font-size: 1rem;
-//         }
-//     }
-// }

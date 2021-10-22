@@ -767,6 +767,9 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -774,9 +777,6 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.5s;
@@ -815,11 +815,11 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .menu__card {
     width: 48%;
@@ -896,7 +896,7 @@ ul {
 
 .offer__doodles {
   position: absolute;
-  top: -5%;
+  top: 0%;
   width: 70px;
   overflow: hidden;
 }
@@ -976,29 +976,38 @@ ul {
   width: 50px;
 }
 
+.offer__container {
+  width: 100%;
+  min-height: 800px;
+}
+
 .offer__table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   display: none;
   -webkit-animation: fadeEffect 1.5s;
           animation: fadeEffect 1.5s;
+  position: relative;
 }
 
 .offer__table--active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+
+.offer__next {
+  width: 85px;
+  margin-left: auto;
+}
+
+.offer__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  margin-top: 2rem;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -1016,17 +1025,19 @@ ul {
     font-size: 2rem;
     margin: 1rem 0 2rem;
   }
-  .offer__table {
+  .offer__slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  }
+  .offer__container {
+    min-height: 500px;
   }
 }
 
@@ -1034,6 +1045,9 @@ ul {
   .offer {
     padding: 1rem 3rem;
     padding-top: 5rem;
+  }
+  .offer__container {
+    min-height: 600px;
   }
   .offer__doodles {
     width: 200px;
