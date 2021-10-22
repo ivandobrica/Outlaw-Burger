@@ -1,3 +1,20 @@
+//tabs for menu
+const offertabs = document.querySelectorAll(".offer__tabs-item");
+const offercontents = document.querySelectorAll(".offer__table");
+for (let i = 0; i < offertabs.length; i++) {
+	offertabs[i].addEventListener("click", () => {
+		for (let j = 0; j < offercontents.length; j++) {
+			offercontents[j].classList.remove("offer__table--active");
+		}
+		for (let jj = 0; jj < offertabs.length; jj++) {
+			offertabs[jj].classList.remove("offer__tabs-item--active");
+		}
+		offercontents[i].classList.add("offer__table--active");
+		offertabs[i].classList.add("offer__tabs-item--active");
+	});
+}
+
+
 // let div = document.getElementsByClassName('menu__wrapper')[0],
 //     data = {
 //         "items": [

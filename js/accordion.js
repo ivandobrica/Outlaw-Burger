@@ -1,4 +1,4 @@
-//tabs
+//tabs for accordion
 const tabs = document.querySelectorAll(".accordion__tabs-item");
 const contents = document.querySelectorAll(".accordion__table");
 for (let i = 0; i < tabs.length; i++) {

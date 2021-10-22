@@ -1,0 +1,122 @@
+.offer {
+    @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+    padding: 1rem;
+    position: relative;
+    padding-top: 5rem;
+    overflow: hidden;
+    &__title {
+        font-size: 3rem;
+    }
+    &__subtitle {
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+    }
+    &__doodles {
+        position: absolute;
+        top: -5%;
+        width: 70px;
+        overflow: hidden;
+        &--right {
+            right: 0;
+            transform: rotate(-115deg);
+        }
+        &--left {
+            left: -20px;
+            transform: rotate(115deg);
+        }
+    }
+    &__wrapper {
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+        width: 100%;
+    }
+    &__tabs {
+        @include flex($justify-content: space-between, $align-items: center);
+        max-width: 450px;
+        margin: 0 0 2rem;
+        width: 100%;
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+            // &--active {
+            //     background-color: $dark-orange;
+            // }
+        }
+    }
+    &__menu-icon {
+        &--burgers {
+            width: 80px;
+        }
+        &--sides {
+            width: 65px;
+        }
+        &--drinks {
+            width: 50px;
+        }
+    }
+    &__table {
+        @include flex($justify-content: center, $align-items: center, $flex-direction: column);
+        display: none;
+        animation: fadeEffect 1.5s;
+        &--active {
+            display: flex;
+        }
+    }
+}
+
+
+@include md {
+    .offer {
+        padding: 1rem 3rem;
+        padding-top: 5rem;
+
+        &__doodles {
+            width: 100px;
+        }
+        &__title {
+            font-size: 5rem;
+        }
+        &__subtitle {
+            font-size: 2rem;
+            margin: 1rem 0 2rem;
+        }
+        &__table {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+    }
+}
+
+
+@include lg {
+    .offer {
+        padding: 1rem 3rem;
+        padding-top: 5rem;
+
+        &__doodles {
+            width: 200px;
+        }
+        &__wrapper {
+            max-width: 1440px;
+            margin: auto;
+        }
+    }
+}
+
+// @include lg {
+//     .offer {
+//         max-width: 1000px;
+//         margin: auto;
+//         &__question {
+//             font-size: 1.125rem;
+//         }
+//         &__answer {
+//             font-size: 1rem;
+//         }
+//     }
+// }
