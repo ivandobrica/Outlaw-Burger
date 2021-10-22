@@ -187,7 +187,7 @@ ul {
 }
 
 .burger--left .burger__container--background {
-  background-image: url("../../assets/60aff6744e1f540ea20b9243_brick-cutout.png");
+  background-image: url("../assets/60aff6744e1f540ea20b9243_brick-cutout.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -383,7 +383,7 @@ ul {
   font-size: 3rem;
   display: inline-block;
   margin: 1rem 0;
-  background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
+  background-image: url(../assets/60afedcba9a36d7064503b33_green-line.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -490,7 +490,7 @@ ul {
   font-size: 3rem;
   display: inline-block;
   margin: 1rem 0;
-  background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
+  background-image: url(../assets/60afedcba9a36d7064503b33_green-line.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -630,7 +630,7 @@ ul {
 }
 
 .review__container {
-  background-image: url(../../assets/60c8d940ec98381ee729ad4c_yellow-splotch.svg);
+  background-image: url(../assets/60c8d940ec98381ee729ad4c_yellow-splotch.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -683,7 +683,7 @@ ul {
   font-size: 1.5rem;
   display: inline-block;
   margin: 1rem 0;
-  background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
+  background-image: url(../assets/60afedcba9a36d7064503b33_green-line.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -742,7 +742,7 @@ ul {
   font-size: 3rem;
   display: inline-block;
   margin: 1rem 0;
-  background-image: url(../../assets/60afedcba9a36d7064503b33_green-line.svg);
+  background-image: url(../assets/60afedcba9a36d7064503b33_green-line.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1207,7 +1207,7 @@ ul {
   }
   .navigation__item:not(:last-of-type):hover::after {
     content: "";
-    background-image: url("../../assets/60c9f45c9ba8c85d6f31a022_lineblack.png");
+    background-image: url("../assets/60c9f45c9ba8c85d6f31a022_lineblack.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
